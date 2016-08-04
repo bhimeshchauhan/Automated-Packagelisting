@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en" dir="ltr">
+  <nav class = "navbar navbar-default" role = "navigation">
+	   <div class = "navbar-header">
+	      <a class = "navbar-brand" style="color:black;" href = "#">SOLUM Package Database</a>
+	   </div>
+  </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <title>Package Listing Solum</title>
+  </head>
+
+  <body>
+    <div class="container">
+	    <div class="row">
+		    <div class="col-md-8">
+			    <div class="input-group">
+				    <span class="input-group-btn">
+			            <span class="btn btn-secondary" style="border-color: grey" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
+			            <input type="file" id="filename" name="uploaded_file" onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" style="display: none;" >
+			        </span>
+			        <span class="form-control"></span>
+				</div>
+			</div>
+		    <div class="col-md-4">
+				<span id="upload" class="btn btn-secondary" style="border-color: grey; ">Upload</span>
+			    <script src="index.js"></script>
+			</div>
+		</div>
+	    <br>
+	    <div class="form-group" style="width: 850px;" >
+			<textarea id="result" class="form-control"></textarea>
+	    </div>
+	</div>
+  </body>
+
+</html>
+
